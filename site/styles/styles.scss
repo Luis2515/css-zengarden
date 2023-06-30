@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;600;900&display=swap");
+
+@mixin hero-heading {
+  font-family: "Montserrat";
+  font-size: 4rem;
+  color: #ffffff;
+  font-weight: 900;
+  margin: 0;
+}
+
+@mixin hero-subheading {
+  font-family: "Montserrat";
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin: 0;
+}
+
+@mixin subheading {
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@mixin copy-white {
+  font-family: "Lora";
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+@mixin copy-black {
+  font-family: "Lora";
+  font-size: 1.25rem;
+  color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5efe8;
+}
+
+header {
+  background-image: url("/images/water.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 43.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+  h1 {
+    @include hero-heading();
+  }
+  h2 {
+    @include hero-subheading();
+  }
+}
