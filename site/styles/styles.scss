@@ -31,6 +31,7 @@
 @mixin copy-black {
   font-family: "Lora";
   font-size: 1.25rem;
+  line-height: 1.875rem;
   color: #000;
 }
 
@@ -55,10 +56,87 @@ header {
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 1rem;
+  grid-column: span 2;
   h1 {
     @include hero-heading();
   }
   h2 {
     @include hero-subheading();
   }
+}
+
+h3 {
+  @include subheading();
+}
+
+p {
+  @include copy-black();
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.summary {
+  margin-top: 3rem;
+  grid-column: span 2;
+  text-align: center;
+}
+
+.preamble {
+  grid-column: span 2;
+  text-align: center;
+  padding: 0 4rem;
+  margin-bottom: 4rem;
+}
+
+.supporting {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  .explanation {
+    background: #d8c4b5;
+    border: 3px solid #203555;
+    padding: 2rem;
+  }
+}
+
+.participation {
+  background: #d8c4b5;
+  border: 3px solid #203555;
+  padding: 2rem;
+}
+
+.benefits {
+  padding: 3rem;
+}
+
+.requirements {
+  padding: 3rem;
+}
+
+footer {
+  background: #d8c4b5;
+  grid-column: span 2;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 10px solid #203555;
+  border-bottom: 10px solid #203555;
+  a {
+    text-decoration: none;
+    @include copy-white();
+    font-size: 2rem;
+    color: #203555;
+    font-weight: bold;
+  }
+}
+
+.wrapper .design-selection {
+  background-image: url("/images/plant.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 43.125rem;
 }
