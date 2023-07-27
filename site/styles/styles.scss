@@ -47,10 +47,11 @@ body {
 
 header {
   background-image: url("/images/water.jpg");
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 43.125rem;
+  height: 45rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,9 +60,12 @@ header {
   grid-column: span 2;
   h1 {
     @include hero-heading();
+    font-size: 10rem;
   }
   h2 {
     @include hero-subheading();
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -138,5 +142,181 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 43.125rem;
+  height: 50rem;
+}
+
+.design-selection {
+  h3 {
+    text-align: center;
+    margin: 0;
+    @include subheading();
+    padding: 100px 0 00;
+  }
+}
+
+.wrapper {
+  background-color: #203555;
+}
+
+.design-selection {
+  nav {
+    ul {
+      padding: 0;
+      width: 75%;
+      margin: 3rem auto 0;
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      li {
+        list-style: none;
+        padding: 5rem;
+        background: #5c8984;
+        color: #ffffff;
+        font-size: 1.5rem;
+        a {
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.design-archives,
+.zen-resources {
+  h3 {
+    color: #ffffff;
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        @include copy-white();
+      }
+    }
+  }
+}
+
+.design-archives {
+  padding: 5rem 0 0 5rem;
+  nav {
+    padding-top: 1rem;
+  }
+}
+
+.zen-resources {
+  padding: 5rem 0 5rem 5rem;
+  ul {
+    padding-top: 1rem;
+  }
+}
+
+//TABLET
+
+@media (max-width: 1024px) {
+  p {
+    font-size: 1rem;
+  }
+
+  header {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  .summary {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .supporting {
+    .benefits,
+    .requirements {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      padding: 0 2rem;
+    }
+  }
+
+  .design-selection {
+    nav {
+      ul {
+        margin: 1.5rem auto 0;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+        li {
+          list-style: none;
+          padding: 2rem;
+          background: #5c8984;
+          color: #ffffff;
+          font-size: 1.5rem;
+          a {
+            text-decoration: none;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+//MOBILE
+
+@media (max-width: 480px) {
+  header {
+    height: 25rem;
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .preamble {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto 5rem;
+  }
+
+  .supporting {
+    .explanation,
+    .participation {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  .supporting {
+    .benefits,
+    .requirements {
+      padding: 0 2rem;
+    }
+  }
+
+  .design-selection {
+    nav {
+      ul {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .wrapper .design-selection {
+    height: 75rem;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    a {
+      padding: 1rem;
+    }
+  }
 }
